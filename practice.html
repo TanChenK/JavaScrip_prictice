@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+ <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <script>
+    function show()
+    {   
+      var get=document.getElementById("month");
+       if(get.month==1||get.month==3||get.month==5||get.month==7||        get.month==8||get.month==10||get.month==12)
+	    alert("本月有31天");
+		else if(get.month==4||get.month==6||get.month==9||get.month==11)
+		  alert("本月有30天")
+	    else alert("本月有28天");
+}
+  </script>
+<title> New Document </title>
+ <meta name="Generator" content="EditPlus">
+ <meta name="Author" content="">
+ <meta name="Keywords" content="">
+ <meta name="Description" content="">
+</head>
+<body>
+  月份：<input type="text" id="month"><input type="button" value="查询" onClick="show()">
+</body>
+</html>
