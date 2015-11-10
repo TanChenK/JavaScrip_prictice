@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+/*var allnode=document.links;
+for(var i=0;i<allnode.length;i++)
+    alert(allnode[i]);*/
+	function  getUr(){
+	var ur=document.links;
+	alert(ur.length);
+	for(var i=0;i<ur.length;i++)
+	     ur[i].href="http://www.baidu.com";
+	}
+	function setArea()
+	{
+		var are=document.getElementById("are");
+		are.value="You are a pig";
+		}
+	function setImg()
+	{
+		var setImg=document.getElementsByName("haha");
+	    for(var i=0;i<setImg.length;i++)
+		  {
+			  setImg[i].innerHTML="哈哈";
+			  }
+		}
+		function totalchoose()
+		{
+			var fax=document.getElementsByName("fax");
+			var total=document.getElementsByName("total")[0];
+			for(var i=0;i<fax.length;i++)
+			     {
+					 fax[i].checked=total.checked;
+					 }
+			}
+		function totalmoney()
+	        {
+				var sum=0;
+				var money=document.getElementsByName("fax");	
+				
+				for(var i=0;i<money.length;i++)	
+				{
+					if(money[i].checked)
+					       sum+=parseInt(money[i].value);
+					}
+					var span1=document.getElementById("span1");
+					span1.innerHTML=sum;
+			}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+
+<body>
+<a>title1</a>
+<a>title2</a>
+<a>title3</a>
+<input type="submit" value="achieve URL" onclick="getUr()" />
+<input type="text" id="are" /><input type="submit" value="设置文本" onclick="setArea()" />
+<hr />
+<div name="haha"></div>
+<div name="haha"></div>
+<input type="submit" value="Set IMG" onclick="setImg()" />
+<hr />
+<input type="checkbox" name="fax" value="3000" />The fax is 3000<br />
+<input type="checkbox" name="fax" value="3000" />The fax is 3000<br />
+<input type="checkbox" name="fax" value="3000" />The fax is 3000<br />
+<input type="checkbox" name="fax" value="3000" />The fax is 3000<br />
+<input type="checkbox" name="fax" value="3000" />The fax is 3000<br />
+<input type="checkbox" name="total"  onclick="totalchoose()"/>all checked<br />
+<input type="submit" value="totalmoney" onclick="totalmoney()"/><span id="span1"></span>
+</body>
+</html>
